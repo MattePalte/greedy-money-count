@@ -62,13 +62,13 @@ size_t index_of_n_most_grater_value(size_t n, char ** array, size_t max_len){
 
 }
 
-// GIVEN A STRING "a:4" IT RETURNS 'a' (the first char)
+// GIVEN A STRING "a:4" IT RETURNS 4 (integer)
 int get_value(char * record){
     char * delimit_pos = strpbrk(record, ":");
     return atoi(delimit_pos+1);
 }
 
-// GIVEN A STRING "a:4" IT RETURNS 4 (integer)
+// GIVEN A STRING "a:4" IT RETURNS 'a' (the first char)
 char get_letter(char * record){
     return record[0];
 }
@@ -137,7 +137,7 @@ char * spiccioli(int number, char * string){
             best_res_so_far = current_res;
             low_lenght = strlen(best_res_so_far);
         }
-        // UPDATE ONLY IT SEQUENCE IS SHORTER
+        // UPDATE ONLY IF SEQUENCE IS SHORTER
         if (strlen(current_res)<low_lenght){
             free(best_res_so_far);
             best_res_so_far = current_res;
